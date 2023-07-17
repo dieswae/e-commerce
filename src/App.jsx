@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>diechollo$</h1>
+        <h1>ecommerce</h1>
         <nav>
           <ul>
             <li><a href='/'>Home</a></li>
