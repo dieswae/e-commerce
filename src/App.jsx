@@ -1,28 +1,28 @@
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import {  RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Layout } from './components/layout'
+import Home from './pages/home/home'
+// const Home = () => <h1>Home</h1>
+import Product from './pages/products/product'
 
-const Home = () => <h1>Home</h1>
-
-const SearchPage= () => <h1>Search Page</h1> 
+// const SearchPage= () => <h1>Search Page</h1> 
 
 function App() {
-  return (
-    <div>
-      <header>
-        <h1>ecommerce</h1>
-        <nav>
-          <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/search-page'>Search Page</a></li>
-          </ul>
-        </nav>
-      </header>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/search-page' element={<SearchPage />} />
-      </Routes>
-    </div>
-  )
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [ {
+        path: '/',
+        element: <Home />
+      },
+      {
+        path: '/products',
+        element: <Product/>
+      }]
+    }
+  ])
+  return <RouterProvider router={router} />
 }
 
 export default App
