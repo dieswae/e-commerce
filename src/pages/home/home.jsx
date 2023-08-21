@@ -36,6 +36,33 @@ const products = [
     price: 40.35
 
 
+  },
+  {
+    imgUrl: image,
+    title: "Vans classic 3",
+    description: "Classic shoes for staker",
+    rate: 4,
+    price: 40.35
+
+
+  },
+  {
+    imgUrl: image,
+    title: "Vans classic 3",
+    description: "Classic shoes for staker",
+    rate: 4,
+    price: 40.35
+
+
+  },
+  {
+    imgUrl: image,
+    title: "Vans classic 3",
+    description: "Classic shoes for staker",
+    rate: 4,
+    price: 40.35
+
+
   }
 ]
 export const Home = () => {
